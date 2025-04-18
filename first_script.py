@@ -18,7 +18,6 @@ import matplotlib.pyplot as plt
 strains = {
     "Strain1": ["A1", "B1", "C1"],
     "Strain2": ["A2", "B2", "C2"],
-    # Add other strains as needed
 }
 
 plt.figure(figsize=(10, 6))
@@ -79,7 +78,7 @@ plt.title('Comparison of Time to Carrying Capacity')
 plt.show()
 
 
-### 6. Statistical Analysis: T-test
+### 5. Statistical Analysis: T-test
 
 python
 from scipy.stats import ttest_ind
@@ -89,8 +88,8 @@ t_stat, p_value = ttest_ind(knock_out_times, knock_in_times)
 print(f"T-statistic: {t_stat}, P-value: {p_value}")
 
 
-### Observations
+# Observations
 
-- *Growth Curves*: The overlaid growth curves allow for a visual comparison of how different strains grow over time.
-- *Time to Carrying Capacity*: The calculated times indicate how quickly each strain reaches its maximum growth.
-- *Statistical Analysis*: The t-test results (p-value) help determine if there's a significant difference between knock-out and knock-in strains in terms of growth rate.
+#Growth Curves*: The overlaid growth curves allow for a visual comparison of how different strains grow over time.
+#Time to Carrying Capacity*: The calculated times indicate how quickly each strain reaches its maximum growth.
+#Statistical Analysis*: The t-test results (p-value) help determine if there's a significant difference between knock-out and knock-in strains in terms of growth rate.
