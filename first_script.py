@@ -21,7 +21,6 @@ strains = {
     # Add other strains as needed
 }
 
-# Plotting
 plt.figure(figsize=(10, 6))
 for strain, columns in strains.items():
     for col in columns:
@@ -33,7 +32,7 @@ plt.legend()
 plt.show()
 
 
-### 3. Determine Time to Reach Carrying Capacity
+### 2. Time to Reach Carrying Capacity
 
 Assuming carrying capacity is the maximum OD600 value for each strain:
 
@@ -49,7 +48,7 @@ time_to_capacity = {strain: time_to_carrying_capacity(columns) for strain, colum
 print(time_to_capacity)
 
 
-### 4. Generate Scatter Plot of Time to Carrying Capacity
+### 3. Scatter Plot of Time to Carrying Capacity
 
 python
 # Scatter plot
@@ -62,7 +61,7 @@ plt.grid(True)
 plt.show()
 
 
-### 5. Generate Box Plot for Knock-out vs Knock-in Strains
+### 4. Box Plot for Knock-out vs Knock-in Strains
 
 Assuming knock-out strains are labeled with 'KO' and knock-in with 'KI':
 
