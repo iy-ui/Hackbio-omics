@@ -12,19 +12,20 @@ print(df.head())
 
 ### 1. Growth Curves for Each Strain
 
-python
 import matplotlib.pyplot as plt
 
 # Define the strains and their corresponding columns
 strains = {
     "Strain1": ["A1", "B1", "C1"],
     "Strain2": ["A2", "B2", "C2"],
+    "Strain3": ["A3", "B3", "C3"],
+    "Strain4": ["A4", "B4", "C4"]
 }
 
 plt.figure(figsize=(10, 6))
 for strain, columns in strains.items():
     for col in columns:
-        plt.plot(data['time'], data[col], label=f'{strain} {col}')
+        plt.plot(df['time'], df[col], label=f'{strain} {col}')
 plt.xlabel('Time (minutes)')
 plt.ylabel('OD600')
 plt.title('Growth Curves of Different Strains')
@@ -34,9 +35,7 @@ plt.show()
 
 ### 2. Time to Reach Carrying Capacity
 
-Assuming carrying capacity is the maximum OD600 value for each strain:
 
-python
 # Function to calculate time to carrying capacity
 def time_to_carrying_capacity(strain_columns):
     max_od = data[strain_columns].max().max()  # Maximum OD600 value
@@ -50,7 +49,6 @@ print(time_to_capacity)
 
 ### 3. Scatter Plot of Time to Carrying Capacity
 
-python
 # Scatter plot
 plt.figure(figsize=(8, 5))
 plt.scatter(time_to_capacity.keys(), time_to_capacity.values(), color='blue')
@@ -63,9 +61,6 @@ plt.show()
 
 ### 4. Box Plot for Knock-out vs Knock-in Strains
 
-Assuming knock-out strains are labeled with 'KO' and knock-in with 'KI':
-
-python
 # Sample data for box plot
 # Replace with actual data
 knock_out_times = [time_to_capacity['Strain1'], time_to_capacity['Strain2']]
@@ -81,7 +76,6 @@ plt.show()
 
 ### 5. Statistical Analysis: T-test
 
-python
 from scipy.stats import ttest_ind
 
 # Perform t-test
