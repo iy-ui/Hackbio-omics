@@ -1,6 +1,5 @@
 print("Hello, Hackbio!")
 
-python
 import pandas as pd
 
 #load the dataset
@@ -38,8 +37,8 @@ plt.show()
 
 # Function to calculate time to carrying capacity
 def time_to_carrying_capacity(strain_columns):
-    max_od = data[strain_columns].max().max()  # Maximum OD600 value
-    time_at_max_od = data['time'][data[strain_columns].idxmax().max()]  # Time at max OD600
+    max_od = df[strain_columns].max().max()  # Maximum OD600 value
+    time_at_max_od = df['time'][df[strain_columns].idxmax().max()]  # Time at max OD600
     return time_at_max_od
 
 # Calculate for each strain
