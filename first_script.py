@@ -3,10 +3,11 @@ print("Hello, Hackbio!")
 python
 import pandas as pd
 
-data_set = "https://raw.githubusercontent.com/HackBio-Internship/2025_project_collection/refs/heads/main/Python/Dataset/mcgc.tsv"
-data = pd.read_csv(data_set, sep="\t")
+#load the dataset
+df_link = "https://raw.githubusercontent.com/HackBio-Internship/2025_project_collection/refs/heads/main/Python/Dataset/mcgc.tsv"
+df = pd.read_csv(df_link, sep="\t")
 
-data.head()
+print(df.head())
 
 
 ### 1. Growth Curves for Each Strain
